@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="BYZ-38-t0r" customClass="HomeVC" customModule="ImageCreatorAI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jOK-eH-N0e">
+                                <rect key="frame" x="20" y="40" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jOK-eH-N0e" secondAttribute="height" multiplier="1:1" id="Ixl-sb-RUf"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hdI-Dr-AVl">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="165-PQ-s28">
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dX-yz-B9E">
+                                        <rect key="frame" x="261" y="0.0" width="74" height="50"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="7Fn-NX-bss"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitBtnTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eVj-kC-vzp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GD2-pw-rdt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hdI-Dr-AVl" secondAttribute="bottom" constant="20" id="G8d-ww-g9x"/>
+                            <constraint firstItem="jOK-eH-N0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LAS-WV-DQz"/>
+                            <constraint firstAttribute="trailing" secondItem="hdI-Dr-AVl" secondAttribute="trailing" constant="20" id="gbO-sD-FiI"/>
+                            <constraint firstItem="jOK-eH-N0e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="jCu-lM-PbU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jOK-eH-N0e" secondAttribute="trailing" constant="20" id="ncv-fy-QYf"/>
+                            <constraint firstItem="hdI-Dr-AVl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="scH-a9-ZAZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descTF" destination="165-PQ-s28" id="Sx6-6G-ly6"/>
+                        <outlet property="generatedImgView" destination="jOK-eH-N0e" id="9ia-ph-hDC"/>
+                        <outlet property="stackView" destination="hdI-Dr-AVl" id="XGd-9f-ywj"/>
+                        <outlet property="stackViewBottom" destination="G8d-ww-g9x" id="NZL-vG-zsn"/>
+                        <outlet property="submitBtn" destination="3dX-yz-B9E" id="Rsn-VI-OUa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
